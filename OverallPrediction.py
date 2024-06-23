@@ -7,11 +7,10 @@ import os
 
 script_dir = os.path.dirname(__file__)
 
-# Load the model and scaler using relative paths
+# LGetting the saved files
 model_path = os.path.join(script_dir, "RandomForestRegressor.pkl")
 scaler_path = os.path.join(script_dir, "StandardScaler.pkl")
 
-# Ensure files are correctly referenced
 loaded_model = pkl.load(open(model_path, 'rb'))
 scale = pkl.load(open(scaler_path, 'rb'))
 
