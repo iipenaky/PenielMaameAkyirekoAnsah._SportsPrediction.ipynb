@@ -7,9 +7,10 @@ import os
 
 script_dir = os.path.dirname(__file__)
 
-# LGetting the saved files
+# Getting saved files from the directory.
 model_path = os.path.join(script_dir, "RandomForestRegressor.pkl")
 scaler_path = os.path.join(script_dir, "StandardScaler.pkl")
+
 
 loaded_model = pkl.load(open(model_path, 'rb'))
 scale = pkl.load(open(scaler_path, 'rb'))
@@ -26,7 +27,7 @@ def overall_prediction(input_data):
 def main():
     st.title('Football Players Overall Prediction Web App')
 
-    #Specify the minimum and maximum values
+    # Specifying the minimum and maximum values
     min_max_values = {
         'movement_reactions': (0, 100),
         'potential': (0, 100),
